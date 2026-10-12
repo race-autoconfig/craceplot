@@ -425,7 +425,7 @@ craceplot is built as an additional tool for the crace package:
 
 
 <!-- [craceplot-guide]: https://race-autoconfig.github.io/craceplot/guide.html -->
-[craceplot-guide]: https://race-autoconfig.github.io/craceplot/user%20guide/index.html
+[craceplot-guide]: https://race-autoconfig.github.io/craceplot/user_guide/index.html
 [craceplot-homepage]: https://race-autoconfig.github.io/craceplot/
 [craceplot-src]: https://github.com/race-autoconfig/craceplot/
 [craceplot-pycode]: https://pypi.org/project/craceplot/

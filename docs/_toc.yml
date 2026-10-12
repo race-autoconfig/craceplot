@@ -1,9 +1,9 @@
 format: jb-book
 root: index
 chapters:
-  - file: user guide/index
+  - file: user_guide/index
     sections:
-      - file: user guide/functions/index
+      - file: user_guide/functions/index
       
   - file: references/index
   - file: history/changelog

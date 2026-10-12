@@ -164,11 +164,12 @@ update_logs = """
 
 Improvements:
 
-    - add function 'display' and boolean parameter 'as_html' to show plot in html format for functions:
-            param_parallelcoord, param_sunburst, qual_heatmap
+    - add description for function run() in craceplot/scripts/main.py to explain how to use it in python console
+    
+    - modify the function cplot_examples() in craceplot/scripts/utils.py to return the destination path instead of ConditionalReturn object, and print the destination path for user reference.
+    
+    - improve the ConditionalReturn class in craceplot/utils/format.py.
 
-    - modify license from MIT to GPL-3.0
-
-    - improve github pages
+    - improve github pages.
 
 """
