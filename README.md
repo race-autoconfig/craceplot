@@ -33,7 +33,6 @@
    doi: 10.1145/3583133.3596408
 <!-- literature end -->
 
----
 <!-- introduction start-->
 # Introduction
 
@@ -63,7 +62,6 @@ explored by crace and the overall performance of the configuration process.
 visualization, crace.
 
 
----
 ## Requisites
 
 Python ($\text{version} \geq 3.8.0$) is required for running craceplot, but you don't need to 
@@ -72,7 +70,6 @@ from the [Python project website](https://www.python.org/). See [Quick Start](#q
 for a quick installation guide of Python.
 <!-- introduction end -->
 
----
 ## User guide
 
 A complete user guide comes with a IPython Notebook file.
@@ -85,7 +82,6 @@ craceplot doc
 The following is a quick-start guide. The user guide gives more detailed instructions.
 
 
----
 <!-- quick user guide start -->
 # Quick Start
 
@@ -100,7 +96,6 @@ The following is a quick-start guide. The user guide gives more detailed instruc
     with the active environment added to PATH (see detailed instructions below).
 
 
----
 <!-- install python start -->
 ## Installing Python
 
@@ -245,7 +240,6 @@ activating a virtual environment. There’s no need to create a new virtual envi
 <!-- install python end -->
 
 
----
 <!-- install craceplot start -->
 ## Installing the craceplot package
 
@@ -324,7 +318,6 @@ To install the package on any platform using the Wheel format, you should run th
 pip3 install /path/to/craceplot-xxx-py3-none-any.whl
 ```
 
----
 ## Testing the installation and invoking craceplot
 
 Once crace has been installed, it can be listed by using command line at the shell:
@@ -396,7 +389,6 @@ craceplot.run("--help")
 ```
 
 
----
 # License
 
 The craceplot package is Copyright © 2026 and distributed under the [GNU 

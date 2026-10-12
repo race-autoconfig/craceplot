@@ -41,7 +41,7 @@ cplot.param_parallelcoord(data=results, options=options, as_html=True)
 You can draw more flexible parallel coord plots via providing parameters `configs`, `parameters`, `colorby`, `showscale`, `shownan`, `colorscale`. 
 
 ```{code-cell} python
-cplot.param_parallelcoord(data=results, options=options, configs='final', colorby='configuration_id',
+cplot.param_parallelcoord(data=results, options=options, configs='elites', colorby='configuration_id',
                           parameters=['algorithm', 'ants', 'beta', 'dlb', 'elitistants', 'localsearch'],
                           showscale=False, shownan=False, colorscale='YlGnBu', as_html=True)
 ```
