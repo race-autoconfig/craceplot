@@ -4,44 +4,40 @@ jupytext:
     format_name: myst
 ---
 
-
-qual_heatmap
+qual_scatter
 ============
 
-Function `qual_heatmap` can help you visualize the performance of all configurations on selected instances. 
-You must provide data in `CraceResults` format and the source of data (training or testing) you select for plotting.
+Function `qual_scatter` can help you compares the performance of the best configuration with that of selected configurations across a set of instances. 
+You must provide data in `CraceResults` format, options in `CplotOptions` format, the source of data (training or testing) you select for plotting, and selected configurations.
+
+When you provide more than two configurations, it will randomly select two from the provided.
+
 
 To check more details for its available arguments, call:
 ```{code-cell} python
 import craceplot as cplot
 
-help(cplot.qual_heatmap)
+help(cplot.qual_scatter)
 ```
 
 
-Take ACOTSP and CATS200 for example:
+Take ACOTSP for example:
 ```{code-cell} python
 import os
 from pathlib import Path
 
-cplot_home = cplot.where().path
+cplot_home = cplot.where()
 
 p = Path(os.path.join(cplot_home, 'inst', 'examples', 'acotsp'))
 path_to_acotsp = os.path.relpath(p, Path.cwd())
 
-p = Path(os.path.join(cplot_home, 'inst', 'examples', 'cats200'))
-path_to_cats200 = os.path.relpath(p, Path.cwd())
-
-results1, options1 = cplot.run('-l', path_to_acotsp)
-results2, options2 = cplot.run('-l', path_to_cats200)
+results, options = cplot.run('-l', path_to_acotsp)
 ```
 
-```{code-cell} python
-cplot.qual_heatmap(data=results1, options=options1, source='training', as_html=True)
-```
 
+You can plot with the `qual_scatter` method:
 ```{code-cell} python
-cplot.qual_heatmap(data=results2, options=options2, source='training', as_html=True)
+cplot.qual_scatter(data=results, options=options, source='training', num='elites')
 ```
 
 

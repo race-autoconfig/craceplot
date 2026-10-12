@@ -82,6 +82,16 @@ def _parse_args(*args):
 
 
 def run(*inputs):
+    """
+    Called in python console
+
+    Allows to install a specific version of crace, by providing the path after --crace or -c in the command line arguments.
+    Utility options [doc, examples, templates, which, where] are not supported here.
+    Other options are supported and can be provided as a list of strings or as a single string with space-separated or comma-separated options. e.g.:
+        run("--crace", "/path/to/crace/scripts/main.py")
+        run("--logDir", "/path/to/logs")
+        run(["--logDir", "/path/to/logs"])
+    """
     return start_cplot(*inputs)
 
 

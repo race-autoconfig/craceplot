@@ -34,12 +34,11 @@ def cplot_examples(destname):
 
     if destname in ("which", "where"):
         destpath = pathlib.Path(dir_cplot)
-        # print(destpath)
-        return ConditionalReturn(path=destpath)
     else:
         destpath = pathlib.Path(dir_cplot / 'inst/' / destname)
-        # print(destpath)
-        return ConditionalReturn(path=destpath)
+
+    print(destpath)
+    return destpath
 
     # not support system without GUI
     system = platform.system()

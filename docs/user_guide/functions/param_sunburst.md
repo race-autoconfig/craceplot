@@ -24,7 +24,7 @@ Take ACOTSP and CATS200 for example:
 import os
 from pathlib import Path
 
-cplot_home = cplot.where().path
+cplot_home = cplot.where()
 
 p = Path(os.path.join(cplot_home, 'inst', 'examples', 'acotsp'))
 path_to_acotsp = os.path.relpath(p, Path.cwd())

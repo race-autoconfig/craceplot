@@ -133,7 +133,7 @@ from pathlib import Path
 
 import craceplot as cplot
 
-cplot_home = cplot.where().path
+cplot_home = cplot.where() 
 
 p = Path(os.path.join(cplot_home, 'inst', 'examples', 'acotsp'))
 path_to_acotsp = os.path.relpath(p, Path.cwd())
@@ -355,11 +355,7 @@ cplot.qual_boxplot(data=results1, options=options1, source='training', num='all'
 
 In this example, data is from ACOTSP and this plot is drawn on the training process for all elite configurations selected in this phase.
 Blue numbers on the top are numbers of used instance of each configuration, while black numbers on the bottom are configuration ids.
-To check more detailed arguments for this function, call:
 
-```{code-cell} python
-help(cplot.qual_boxplot)
-```
 
 #### function qual_heatmap
 
@@ -372,4 +368,17 @@ cplot.qual_heatmap(data=results1, options=options1, source='training', as_html=T
 
 ```{code-cell} python
 cplot.qual_heatmap(data=results2, options=options2, source='training', as_html=True)
+```
+
+
+#### function qual_scatter
+
+Function `qual_scatter` can help you compares the performance of the best configuration with that of selected configurations across a set of instances. 
+You must provide data in `CraceResults` format, options in `CplotOptions` format, the source of data (training or testing) you select for plotting, and selected configurations.
+
+When you provide more than two configurations, it will randomly select two from the provided.
+
+You can plot with the `qual_scatter` method:
+```{code-cell} python
+cplot.qual_scatter(data=results1, options=options1, source='training', num='elites')
 ```
